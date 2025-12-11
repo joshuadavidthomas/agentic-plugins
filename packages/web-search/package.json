@@ -1,0 +1,20 @@
+{
+  "name": "@joshthomas/opencode-web-search",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Web search plugin for OpenCode with Exa AI support",
+  "author": "Josh Thomas <josh@joshthomas.dev>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/joshuadavidthomas/agentic-plugins"
+  },
+  "main": "./src/plugin.ts",
+  "files": ["src", "README.md"],
+  "peerDependencies": {
+    "@opencode-ai/plugin": "catalog:"
+  },
+  "devDependencies": {
+    "@opencode-ai/plugin": "catalog:"
+  }
+}
