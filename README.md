@@ -1,6 +1,6 @@
 # agentic-plugins
 
-Experimenting with plugins for AI coding agents.
+Experimenting with plugins for LLM coding agents.
 
 ## Packages
 
