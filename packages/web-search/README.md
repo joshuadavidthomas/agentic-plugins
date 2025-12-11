@@ -6,11 +6,7 @@ Adds specialized search agents scoped so their tools don't pollute your primary 
 
 ## Installation
 
-```bash
-opencode plugin install @joshthomas/opencode-web-search
-```
-
-Then add to your `opencode.json`:
+Add to your `opencode.json`:
 
 ```json
 {
