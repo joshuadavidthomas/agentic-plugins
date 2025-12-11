@@ -1,6 +1,6 @@
 {
   "name": "@joshthomas/opencode-web-search",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "type": "module",
   "description": "Web search plugin for OpenCode with Exa AI support",
   "author": "Josh Thomas <josh@joshthomas.dev>",
