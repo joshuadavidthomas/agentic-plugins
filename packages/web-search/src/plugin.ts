@@ -89,29 +89,56 @@ Find actual code examples, API signatures, implementation patterns, and SDK docu
 
         // Commands
         config.command["web-search"] = {
-          template: `Search the web for the following query. If the user input is empty, ask what they want to search for.
-
-<user_input>
+          description: "Search the web for information",
+          template: `<user_input>
 $ARGUMENTS
-</user_input>`,
+</user_input>
+
+If the user input above is empty or contains only whitespace, respond with:
+
+"A search query is required. Please try again with:
+
+/web-search <your query>
+
+Example: /web-search best practices for Django REST framework pagination"
+
+Otherwise, search the web for the query. Provide a concise summary with source links.`,
           agent: "web-search",
         };
 
         config.command["code-search"] = {
-          template: `Find code examples and implementations for the following query. If the user input is empty, ask what they want to search for.
-
-<user_input>
+          description: "Find code examples and implementations",
+          template: `<user_input>
 $ARGUMENTS
-</user_input>`,
+</user_input>
+
+If the user input above is empty or contains only whitespace, respond with:
+
+"A search query is required. Please try again with:
+
+/code-search <what to find>
+
+Example: /code-search React useEffect cleanup function examples"
+
+Otherwise, find code examples and implementations. Show actual code snippets with source links.`,
           agent: "code-search",
         };
 
         config.command["deep-research"] = {
-          template: `Use the deep researcher tools (deep_researcher_start, then deep_researcher_check) to thoroughly research the following query. If the user input is empty, ask what they want to research.
-
-<user_input>
+          description: "Comprehensive research across multiple sources",
+          template: `<user_input>
 $ARGUMENTS
-</user_input>`,
+</user_input>
+
+If the user input above is empty or contains only whitespace, respond with:
+
+"A research query is required. Please try again with:
+
+/deep-research <your question>
+
+Example: /deep-research comparison of PostgreSQL vs MongoDB for time-series data"
+
+Otherwise, use the deep researcher tools (deep_researcher_start, then deep_researcher_check) to thoroughly research the query. Synthesize findings from multiple sources.`,
           agent: "web-search",
         };
 
@@ -184,20 +211,38 @@ Find actual code examples, API signatures, implementation patterns, and SDK docu
 
         // Commands (no deep-research in fallback mode)
         config.command["web-search"] = {
-          template: `Search the web for the following query. If the user input is empty, ask what they want to search for.
-
-<user_input>
+          description: "Search the web for information",
+          template: `<user_input>
 $ARGUMENTS
-</user_input>`,
+</user_input>
+
+If the user input above is empty or contains only whitespace, respond with:
+
+"A search query is required. Please try again with:
+
+/web-search <your query>
+
+Example: /web-search Next.js server components best practices"
+
+Otherwise, search the web for the query. Provide a concise summary with source links.`,
           agent: "web-search",
         };
 
         config.command["code-search"] = {
-          template: `Find code examples and implementations for the following query. If the user input is empty, ask what they want to search for.
-
-<user_input>
+          description: "Find code examples and implementations",
+          template: `<user_input>
 $ARGUMENTS
-</user_input>`,
+</user_input>
+
+If the user input above is empty or contains only whitespace, respond with:
+
+"A search query is required. Please try again with:
+
+/code-search <what to find>
+
+Example: /code-search Python asyncio gather vs wait usage"
+
+Otherwise, find code examples and implementations. Show actual code snippets with source links.`,
           agent: "code-search",
         };
       }
