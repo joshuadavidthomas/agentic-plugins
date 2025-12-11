@@ -3,27 +3,6 @@ import type { Plugin } from "@opencode-ai/plugin";
 export const WebSearchPlugin: Plugin = async ({ client, $ }) => {
   const hasExaKey = !!process.env.EXA_API_KEY;
 
-  // Show toast notification indicating which mode we're in
-  if (hasExaKey) {
-    await client.tui.showToast({
-      body: {
-        title: "Web Search Plugin",
-        message: "Using Exa AI MCP server",
-        variant: "success",
-        duration: 3000,
-      },
-    });
-  } else {
-    await client.tui.showToast({
-      body: {
-        title: "Web Search Plugin",
-        message: "EXA_API_KEY not set - using built-in OpenCode tools",
-        variant: "warning",
-        duration: 5000,
-      },
-    });
-  }
-
   return {
     config: async (config) => {
       config.agent = config.agent || {};
