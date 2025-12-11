@@ -85,7 +85,7 @@ A toast notification tells you which mode is active on plugin load.
 
 ## License
 
-opencode-web-search is licensed under the MIT license. See the [`LICENSE`](LICENSE) file for more information.
+opencode-web-search is licensed under the MIT license. See the [`LICENSE`](../../LICENSE) file for more information.
 
 ---
 
